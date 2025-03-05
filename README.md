@@ -1,10 +1,13 @@
-# 2311102441246_MUHAMMAD-FARHAN-MAULANA_DJANGO
+# 2311102441246_MUHAMMAD-FARHAN-MAULANA-DJANGO
+
+## Deskripsi Singkat
+Pada project kali ini saya memberikan tutorial tentang bagaimana cara menginstal django menggunakan python
 
 ## Kita memerlukan beberapa tools
-pertama saya menggunakan Vscode sebagai code editor
-kedua kita memerlukan python (minimal versi 3)
-kita perlu juga Git dan browser chrome atau firefox
-ada juga Virtualenv sebagai tool yang akan membuat lingkungan virtual yang terisolasi dan pip sebagai tool yang di pakai untuk menginstall django
+1. saya menggunakan Vscode sebagai code editor
+2. kita memerlukan python (minimal versi 3)
+3. kita perlu juga Git dan browser chrome atau firefox
+4. Virtualenv sebagai tool yang akan membuat lingkungan virtual yang terisolasi dan pip sebagai tool yang di pakai untuk menginstall django
 
 # Note
 ## jika menginstall python biasanya Viartualenv dan pip otomatis terinstall
