@@ -1,30 +1,31 @@
 # 2311102441246_MUHAMMAD-FARHAN-MAULANA-DJANGO
 
+# Personal Portfolio
+
+[![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)](#)
+[![Django](https://img.shields.io/badge/Django-%23092E20.svg?logo=django&logoColor=white)](#)
+
+.
 ## Deskripsi Singkat
-Pada project kali ini saya memberikan tutorial tentang bagaimana cara menginstal django menggunakan python
+Pada project kali ini saya membuat website yang akan digunakan sebagai portofolio saya
 
-## Kita memerlukan beberapa tools
-1. saya menggunakan Vscode sebagai code editor
-2. kita memerlukan python (minimal versi 3)
-3. kita perlu juga Git dan browser chrome atau firefox
-4. Virtualenv sebagai tool yang akan membuat lingkungan virtual yang terisolasi dan pip sebagai tool yang di pakai untuk menginstall django
+## Ada apa saja di website ini
+1. halaman my home
+2. halaman my about
 
-# Note
-## jika menginstall python biasanya Viartualenv dan pip otomatis terinstall
 
-# Instalasi Django di Windows
-1. buat folder .venv (disini saya memakai .venv)
-2. masuk folder .venv dan buat virtualenv menggunakan perintah 
+# Cara menjalankan project
+1. salin projek
 ```
-py -m venv .venv
+git clone https://github.com/4hannnm/2311102441246_MUHAMMAD-FARHAN-MAULANA_DJANGO
 ```
-3. aktifkan .venv dengan ketik 
+3. Buat virtual environment 
 ```
-cd .venv/Scripts
+python -m venv .venv
 ```
-4. setelah masuk di dalam folder Scripts, ketik 
+4. Aktifkan .venv 
 ```
-activate
+.venv\Scripts\activate
 ```
 5. jika .venv telah aktif, kita bisa melanjutkan menginstall django dengan mengetik
 ```
@@ -36,10 +37,17 @@ pip list
 ```
 7. selanjutnya kita akan membuat project django dengan mengetik 
 ```
-"django-admin startproject mainwebsite"
+django-admin startproject portofolio
 ``` 
-(disini saya menggunakan mainwebsite)
-8. untuk mengecek django terinstal, ketik 
+8. untuk menampilkan website 
 ```
 py manage.py runserver
+```
+9. untuk melihat halaman my home
+```
+http://127.0.0.1:8000/
+```
+10. untuk melihat halaman my about
+```
+http://127.0.0.1:8000/about/
 ```
