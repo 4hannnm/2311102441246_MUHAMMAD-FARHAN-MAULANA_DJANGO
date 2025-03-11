@@ -13,6 +13,6 @@ def about(request):
     template_name = "about.html"
     context = {
         'title' : 'about me',
-        'welcome' :'ini page about',
+        'welcome' :'ini page about me',
     }
     return render(request, template_name, context)
