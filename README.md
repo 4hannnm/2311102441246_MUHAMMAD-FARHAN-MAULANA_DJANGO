@@ -5,13 +5,13 @@
 [![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)](#)
 [![Django](https://img.shields.io/badge/Django-%23092E20.svg?logo=django&logoColor=white)](#)
 
-.
+
 ## Deskripsi Singkat
-Pada project kali ini saya membuat website yang akan digunakan sebagai portofolio saya
+Membuat model di django
 
 ## Ada apa saja di website ini
-1. halaman my home
-2. halaman my about
+1. membuat model pengguna
+2. membuat model berita
 
 
 # Cara menjalankan project
@@ -19,35 +19,71 @@ Pada project kali ini saya membuat website yang akan digunakan sebagai portofoli
 ```
 git clone https://github.com/4hannnm/2311102441246_MUHAMMAD-FARHAN-MAULANA_DJANGO
 ```
-3. Buat virtual environment 
-```
-python -m venv .venv
-```
-4. Aktifkan .venv 
+2. Aktifkan .venv 
 ```
 .venv\Scripts\activate
 ```
-5. jika .venv telah aktif, kita bisa melanjutkan menginstall django dengan mengetik
+3. membuat apps pengguna
 ```
-pip install django
+py manage.py startapp pengguna
 ```
-6. untuk mengetahui library django terinstall, ketik 
+
+4. membuat apps berita
 ```
-pip list
+py manage.py startapp berita
 ```
-7. selanjutnya kita akan membuat project django dengan mengetik 
+
+5. membuat model pengguna/models.py
 ```
-django-admin startproject portofolio
-``` 
-8. untuk menampilkan website 
+from django.db import models
+from django.contrib.auth.models import User
+
+# Create your models here.
+
+class Biodata(models.Model):
+    User = models.OneToOneField(User, on_delete=models.CASCADE)
+    alamat = models.TextField(blank=True, null=True)
+    telpon = models.CharField(max_length=20, blank=True, null=True)
+    foto = models.ImageField(upload_to='pengguna', blank=True, null=True)
+
+    def _str_(self):
+        return self.user.username
+    
+    class Meta:
+        verbose_name_plural = "1. Biodata"
+```
+
+6. membuat model berita/models.py
+```
+from django.db import models
+from django.contrib.auth.models import User
+
+# Create your models here.
+
+class Kategori(models.Model):
+    nama = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.nama
+    
+    class Meta:
+        verbose_name_plural = "1. Kategori"
+            
+class Artikel(models.Model):
+    judul = models.CharField(max_length=255)
+    isi = models.TextField(blank=True, null=True)
+    Kategori = models.ForeignKey(Kategori, on_delete=models.SET_NULL, blank=True, null=True)
+    author = models.ForeignKey(User, on_delete=models.PROTECT)
+    thumbnail = models.ImageField(upload_to='artikel',blank=True, null=True)
+    
+    def __str__(self):
+        return self.judul
+    
+    class Meta:
+        verbose_name_plural = "2. Artikel"
+```
+
+7. Setelah project dan apps telah dibuat dan untuk mengeceknya kita bisa mengetik
 ```
 py manage.py runserver
-```
-9. untuk melihat halaman my home
-```
-http://127.0.0.1:8000/
-```
-10. untuk melihat halaman my about
-```
-http://127.0.0.1:8000/about/
 ```
