@@ -1,0 +1,73 @@
+<!--
+=========================================================
+* Material Kit 2 PRO - v3.0.0
+=========================================================
+
+* Product Page:  https://www.creative-tim.com/product/material-kit-pro 
+* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+{% block asset %}
+
+{% endblock asset %}
+
+<body class="blog-posts bg-gray-200">
+  <!-- Navbar Transparent -->
+  {% include 'halaman/navbar.html' %}
+  <!-- End Navbar -->
+  <!-- End Navbar -->
+  <!-- -------- START HEADER 11 w/ carousel ------- -->
+  {% block content %}
+  
+  {% endblock content %}
+  <!-- ---- START FOOTER 2 dark w/ bg image 5 cols & subscribe area & social---- -->
+  {% include "halaman/footer.html" %}
+  <!-- ---- END FOOTER 2 dark w/ bg image 5 cols & subscribe area & social---- -->
+  <!--   Core JS Files   -->
+  <script src="{% static 'halaman/assets/js/core/popper.min.js' %}" type="text/javascript"></script>
+  <script src="{% static 'halaman/assets/js/core/bootstrap.min.js' %}" type="text/javascript"></script>
+  <script src="{% static 'halaman/assets/js/plugins/perfect-scrollbar.min.js' %}"></script>
+  
+  <!--  Plugin for TypedJS, full documentation here: https://github.com/mattboldt/typed.js/ -->
+  <script src="{% static 'halaman/assets/js/plugins/typedjs.js' %}"></script>
+  <script src="{% static 'halaman/assets/js/plugins/choices.min.js' %}"></script>
+  <script src="{% static 'halaman/assets/js/plugins/flatpickr.min.js' %}"></script>
+
+  <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
+  <script src="{% static 'halaman/assets/js/plugins/parallax.min.js' %}"></script>
+    
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="{% static 'halaman/assets/js/plugins/nouislider.min.js' %}" type="text/javascript"></script>
+
+  <!--  Plugin for the blob animation -->
+  <script src="{% static 'halaman/assets/js/plugins/anime.min.js' %}" type="text/javascript"></script>
+  <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
+
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+  <script src="{% static 'halaman/assets/js/material-kit-pro.min.js' %} ?v=3.0.0" type="text/javascript"></script>
+  <script>
+    if (document.getElementById('language-select')) {
+      var element = document.getElementById('language-select');
+      const example = new Choices(element, {
+        searchEnabled: false
+      });
+
+    }
+    if (document.getElementById('currency-select')) {
+      var element = document.getElementById('currency-select');
+      const example = new Choices(element, {
+        searchEnabled: false
+      });
+    }
+  </script>
+</body>
+
+</html>
