@@ -563,3 +563,16 @@
     </div>
   </div>
 {% endblock content %}
+
+{% block js %}
+$(document).ready(function() {
+  // Javascript method's body can be found in assets/js/demos.js
+  demo.initDashboardPageCharts();
+
+
+  demo.initVectorMap();
+
+});
+{% endblock js %}
+
+
