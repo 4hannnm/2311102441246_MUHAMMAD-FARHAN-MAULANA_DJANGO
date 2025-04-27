@@ -15,7 +15,7 @@ class Kategori(models.Model):
 class Artikel(models.Model):
     judul = models.CharField(max_length=255)
     isi = models.TextField(blank=True, null=True)
-    Kategori = models.ForeignKey(Kategori, on_delete=models.SET_NULL, blank=True, null=True)
+    kategori = models.ForeignKey(Kategori, on_delete=models.SET_NULL, blank=True, null=True)
     author = models.ForeignKey(User, on_delete=models.PROTECT)
     thumbnail = models.ImageField(upload_to='artikel',blank=True, null=True)
     
