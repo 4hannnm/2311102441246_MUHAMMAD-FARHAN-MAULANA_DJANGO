@@ -1,0 +1,97 @@
+{% extends "halaman/index.html" %}
+{% load static %}
+
+{% block content %}
+<section class="position-relative">
+    <div class="page-header min-vh-50" style="background-image: url('{% static "halaman/assets/img/bg10.jpg" %}');" loading="lazy">
+      <span class="mask bg-gradient-dark opacity-6"></span>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center mx-auto">
+            <h2 class="text-white fadeIn2 fadeInBottom">How can we help you?</h2>
+            <p class="lead text-white fadeIn2 fadeInBottom">We always want to hear from you! Let us know if there is anything that we can help you with.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6 mb-4">
+    <div class="container">
+      <div class="row mt-sm-0 mt-5">
+        <div class="col-lg-3 col-md-4 position-relative ms-lg-auto">
+          <div class="p-3 text-center border-right-after">
+            <i class="material-icons text-gradient text-info text-5xl mb-3">email</i>
+            <h6 class="mb-0">Email</h6>
+            <p class="text-dark font-weight-normal">hello@creative-tim.com</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 position-relative">
+          <div class="p-3 text-center border-right-after">
+            <i class="material-icons text-gradient text-info text-5xl mb-3">call</i>
+            <h6 class="mb-0">Phone</h6>
+            <p class="text-dark font-weight-normal">+1(424) 535 3523</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 me-lg-auto">
+          <div class="p-3 text-center">
+            <i class="material-icons text-gradient text-info text-5xl mb-3">contacts</i>
+            <h6 class="mb-0">Contact</h6>
+            <p class="text-dark font-weight-normal">Andrew Samian</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="py-md-7 py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8 col-10 mx-auto text-center">
+            <div class="mb-md-5">
+              <h3>Contact us</h3>
+              <p>
+                For further questions, including partnership opportunities, please email hello@creative-tim.com
+                or contact using our contact form.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="card card-plain">
+              <form id="contact-form" method="post" autocomplete="off">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="input-group input-group-static mb-4">
+                        <label>Full Name</label>
+                        <input type="text" class="form-control" placeholder="Full Name">
+                        <span class="input-group-text"><i class="material-icons">person</i></span>
+                      </div>
+                    </div>
+                    <div class="col-md-6 ps-md-2">
+                      <div class="input-group input-group-static mb-4">
+                        <label>Email</label>
+                        <input type="email" class="form-control" placeholder="Email">
+                        <span class="input-group-text"><i class="material-icons">email</i></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-4 mt-md-0 mt-4">
+                    <div class="input-group input-group-static mb-4">
+                      <label>What can we help you?</label>
+                      <textarea name="message" class="form-control" id="message" rows="6" placeholder="Describe your problem in at least 250 characters"></textarea>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+                      <button type="submit" class="btn bg-gradient-info mt-4">Send Message</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+{% endblock %}

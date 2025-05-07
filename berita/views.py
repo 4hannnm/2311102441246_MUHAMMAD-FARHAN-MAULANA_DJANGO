@@ -14,7 +14,6 @@ def dashboard(request):
 def kategori_list(request):
     template_name = "dashboard/snippets/kategori_list.html"
     kategori = Kategori.objects.all()
-    print(kategori)
     context = {
         'title' : 'halaman kategori',
         'kategori' : kategori,
@@ -25,7 +24,6 @@ def kategori_add(request):
     template_name = "dashboard/snippets/kategori_add.html"
     if request.method == "POST":
         nama_input = request.POST.get('nama_kategori')
-        print(nama_input)
         Kategori.objects.create(
             nama = nama_input
         )
@@ -67,7 +65,6 @@ def kategori_delete(request, id_kategori):
 def artikel_list(request) : 
     template_name = "dashboard/snippets/artikel_list.html"
     artikel = Artikel.objects.all()
-    print(artikel)
     context = {
         'title' : 'daftarartikel',
         'artikel' : artikel
