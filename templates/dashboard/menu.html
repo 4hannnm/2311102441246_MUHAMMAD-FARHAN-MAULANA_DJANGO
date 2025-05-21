@@ -8,7 +8,7 @@
       <div class="info">
         <a data-toggle="collapse" href="#collapseExample" class="collapsed">
           <span>
-            Farhan
+            {{user.username}}
             <b class="caret"></b>
           </span>
         </a>
@@ -28,9 +28,9 @@
               </a>
             </li>
             <li>
-              <a href="#">
-                <span class="sidebar-mini-icon">S</span>
-                <span class="sidebar-normal">Settings</span>
+              <a href="{% url "user_logout" %}">
+                <span class="sidebar-mini-icon">L</span>
+                <span class="sidebar-normal">Logout</span>
               </a>
             </li>
           </ul>

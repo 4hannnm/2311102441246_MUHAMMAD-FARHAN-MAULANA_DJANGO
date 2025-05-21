@@ -47,8 +47,10 @@
                     <button onclick="location.href='/'" type="button" class="btn btn-primary" >ALL</button>
 
                     {% for kategori in data_kategori %}
+                    <li {% if menu_aktif == kategori.nama %} class="active" {% endif %}>
                     <button onclick="location.href='/?kategori={{ kategori.nama }}'" type="button" class="btn btn-primary" >{{kategori}}</button>
                     {% endfor %}
+                    </li>
                   </div>
                 </div>
               </div>
@@ -58,24 +60,7 @@
               </div>
             </div>
           </div>
-          
-
               <div class="col-12">
-                <!-- START Blogs w/ 3 rows w/ image on left & title, text, author on end-->
-                <section class="py-5 ">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-8 mx-auto text-center mb-5">
-                        <span class="badge badge-info mb-2">Living</span>
-                        <h2>A new way to buy your next home</h2>
-                        <p>
-                          If you can’t decide, the answer is no. If two equally difficult paths,
-                          choose the one more painful in the short term (pain avoidance
-                          is creating an illusion of equality).
-                        </p>
-                      </div>
-                    </div>
-                  </div>
                   {% for artikel in data_artikel %}
                   
                   <section class="py-5 bg-gray-100">
@@ -108,6 +93,10 @@
                           </div>
                         </div>
                       </div>
+                    </div>
+                    {%empty%}
+                    <div class="col" style="margin: 30px;">
+                      <p class="text-center">Tidak Ada Berita ...</p>
                     </div>
                   </section>
                   {% endfor %}

@@ -7,18 +7,25 @@ def home(request, kategori=None):
     if kategori == None:
         print("ALL")
         data_artikel = Artikel.objects.all()
+        menu_aktif = "ALL"
     else:
-        print("bukan ALL")
-        kategori = Kategori.objects.get(nama=kategori)
-        data_artikel = Artikel.objects.filter(kategori=kategori)
-   
-    
+        print("bukan ALL")    
+        get_kategori = Kategori.objects.filter(nama=kategori)
+        print(get_kategori)
+        if get_kategori.count() != 0:
+            data_artikel = Artikel.objects.filter(kategori=get_kategori[0])
+            menu_aktif = kategori
+        else:
+            menu_aktif = "ALL"
+            data_artikel = []
+                
     data_kategori = Kategori.objects.all()
     context = {
         'title' : 'my home',
         'welcome' : 'welcome my home',
         'data_artikel' : data_artikel,
-        'data_kategori' : data_kategori
+        'data_kategori' : data_kategori,
+        'menu_aktif' : menu_aktif
     }
     return render(request, template_name, context)
 
