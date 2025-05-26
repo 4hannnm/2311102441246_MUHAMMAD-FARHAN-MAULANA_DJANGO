@@ -1,4 +1,5 @@
 {% load static %}
+{% load auth_extras %}
 
 <div class="sidebar-wrapper">
     <div class="user">
@@ -44,23 +45,27 @@
           <p>Dashboard</p>
         </a>
       </li>
+          {% if  user|has_group:'Operator'%}
       <li>
         <a href="{% url 'kategori_list' %}">
           <i class="nc-icon nc-box"></i>
           <p>Kategori</p>
         </a>
       </li>
+       {% endif %}
       <li>
         <a href="{% url 'artikel_list'%}">
           <i class="nc-icon nc-chart-bar-32"></i>
-          <p>Berita</p>
+          <p>Artikel</p>
         </a>
       </li>
+      {% if  user|has_group:'Operator'%}
       <li>
         <a href="../examples/calendar.html">
           <i class="nc-icon nc-calendar-60"></i>
           <p>Pengguna</p>
         </a>
       </li>
+       {% endif %}
     </ul>
   </div>
